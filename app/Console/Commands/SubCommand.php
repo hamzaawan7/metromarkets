@@ -2,23 +2,21 @@
 
 namespace App\Console\Commands;
 
-use Illuminate\Console\Command;
-
-class Driver extends Command
+class DateFilter extends Root
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'command:name';
+    protected $signature = 'date_filter {--args=*}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'This is the driver class which runs different set of commands and create the object';
+    protected $description = 'This is the subclass which runs different set of commands and creates the object';
 
     /**
      * Create a new command instance.
@@ -38,5 +36,7 @@ class Driver extends Command
     public function handle()
     {
         //
+        echo "Dying in Subcommand" . "\n";
+        die;
     }
 }
