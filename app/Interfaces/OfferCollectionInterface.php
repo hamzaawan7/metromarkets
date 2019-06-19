@@ -24,5 +24,5 @@ interface OfferCollectionInterface
     /**
      * @return Iterator
      */
-    public function getIterator(): Iterator;
+    public function getIterator(): int;
 }

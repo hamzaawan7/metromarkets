@@ -7,7 +7,7 @@ use Iterator;
 use OfferCollectionInterface;
 use OfferInterface;
 
-class Offers implements OfferCollectionInterface
+class OffersCollection implements OfferCollectionInterface
 {
     private $arr;
     private $i;
@@ -28,6 +28,7 @@ class Offers implements OfferCollectionInterface
     {
         // TODO: Implement add() method.
         $this->arr[$this->i] = $offer;
+        $this->i++;
     }
 
     /**
@@ -45,9 +46,9 @@ class Offers implements OfferCollectionInterface
     /**
      * @return Iterator
      */
-    public function getIterator(): Iterator
+    public function getIterator(): int
     {
         // TODO: Implement getIterator() method.
-        return new Iterator;
+        return $this->i++;
     }
 }

@@ -2,21 +2,21 @@
 
 namespace App\Console\Commands;
 
-class DateFilter extends Root
+class SubCommand extends Root
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'date_filter {--args=*}';
+    protected $signature = 'sub-command {filter_type} {args*}';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'This is the subclass which runs different set of commands and creates the object';
+    protected $description = 'This is the sub-command which runs the filtering of objects';
 
     /**
      * Create a new command instance.
@@ -36,7 +36,6 @@ class DateFilter extends Root
     public function handle()
     {
         //
-        echo "Dying in Subcommand" . "\n";
-        die;
+
     }
 }
